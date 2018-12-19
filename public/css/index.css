@@ -1,0 +1,187 @@
+
+/* Style the overzichtstabel */
+
+.overzicht {
+	margin		: auto;
+	width		: 90%;
+	max-height	: 200px;
+	overflow	: scroll;
+}
+
+.overzichtheader {
+	margin		: auto;
+	width		: 90%;
+	margin-top	: 25px;
+}
+
+#overzichtstabel, #overzichtstabelheader {
+	min-width	: 100%;
+	font-size	: 14px;
+}
+
+#overzichtstabelheader th {
+	text-align	: left;
+	background	: #bbb;
+}
+
+.regel1 {
+	background	: #e8e8e8;
+}
+
+.regel2 {
+	background	: #cacaca;
+}
+
+
+/* Style the berichtentabel */
+
+#ad_foto {
+	margin-top	: 0px;
+	padding		: 0px 10px 5px 10px;
+	float		: left;
+	height		: 120px;
+	width		: auto;
+}
+
+.advertenties {
+	margin		: auto;
+	padding    	: 5px 20px 5px 20px;
+	font-size	: 14px
+}
+
+#advertentieplustabel {
+	width			: 100%;
+}
+
+#advertentietabel, #biedingentabel {
+	margin-top		: 30px;
+	vertical-align	: text-top;
+}
+
+#advertentietabel {
+    float       : left;
+}
+
+.align_rechts {
+	text-align	: right;
+}
+
+.biedingen {
+	width			: 70px;
+	height			: 25px;
+	color			: #008;
+	text-align		: right;
+	border-radius	: 2px;
+}
+
+#biedingentabel {
+    float       : right;
+    width       : 100%;
+}
+
+#biedknop {
+	background		: #abf;
+	font-size		: 14px;
+	background		: -moz-linear-gradient(#eee, #999);
+	background		: -webkit-linear-gradient(#eee, #999);
+	background		: -ms-linear-gradient(#eee, #999);
+	background		: -o-linear-gradient(#eee, #999);
+	border			: 1px #999 solid;
+	border-radius	: 5px;
+	cursor          : pointer;
+}
+
+#biedknop:hover {
+	background		: #ffdd3b;
+	background		: -moz-linear-gradient(#ffbe59, #ffecc6);
+	background		: -webkit-linear-gradient(#ffbe59, #ffecc6);
+	background		: -ms-linear-gradient(#ffbe59, #ffecc6);
+	background		: -o-linear-gradient(#ffbe59, #ffecc6);
+	border			: 1px #ffbe59 solid;
+}
+
+#bodplaatsen {
+    clear       : left;
+}
+
+#btblcelb {
+	padding			: 5px 20px 10px 10px;
+	text-align		: justify;
+	border-right	: 1px #ccc solid;
+}
+
+#btblcelx {
+	padding			: 5px 20px 10px 10px;
+	background		: #ddd;
+	vertical-align	: top;
+	border-bottom	: 1px #ddd solid;
+}
+
+#btblrij1 {
+	background	: #aaa;
+}
+
+.btblrij1, .btblcel1 {
+	padding		: 3px 20px 3px 10px;
+}
+
+.btblcel1:hover {
+	color		: blue;
+	background		: -moz-linear-gradient(#ffbe59, #ffecc6);
+	background		: -webkit-linear-gradient(#ffbe59, #ffecc6);
+	background		: -ms-linear-gradient(#ffbe59, #ffecc6);
+	background		: -o-linear-gradient(#ffbe59, #ffecc6);
+/*	border			: 1px #ffbe59 solid; */
+	cursor		: pointer;
+}
+
+#btblrijy, #btblrijz {
+	background		: #ddd;
+	border-top: 	: 1px #ddd solid;
+	border-bottom	: 1px #aaa solid;
+}
+
+#btblrijz {
+	text-align		: center;
+}
+
+.fotogalerij {
+	clear			: left;
+	display			: block;
+}
+/*
+#foto_header {
+	padding			: 15px 0px 0px 10px;
+}
+*/
+#tbplusk1 {
+	width			: 65%;
+	vertical-align	: top;
+}
+
+#tbplusk2 {
+	width			: 30%;
+	vertical-align	: top;
+}
+
+#verwijder_ad {
+	font-size		: 14px;
+	color			: #fbb;
+	background		: -moz-linear-gradient(#f44, #900);
+	background		: -webkit-linear-gradient(#f44, #900);
+	background		: -ms-linear-gradient(#f44, #900);
+	background		: -o-linear-gradient(#f44, #900);
+	border			: 1px #c96 solid;
+	border-radius	: 5px;
+	cursor			: pointer;
+}
+
+#verwijder_ad:hover {
+	font-weight		: bold;
+	color			: #000;
+	background		: -moz-linear-gradient(#900, #f44);
+	background		: -webkit-linear-gradient(#900, #f44);
+	background		: -ms-linear-gradient(#900, #f44);
+	background		: -o-linear-gradient(#900, #f44);
+	border			: 1px #c96 solid;
+}
