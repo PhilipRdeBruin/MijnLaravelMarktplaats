@@ -59,7 +59,8 @@
 }
 
 #advertentietabel {
-    float       : left;
+	float       : left;
+	width		: 95%;
 }
 
 .align_rechts {

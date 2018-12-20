@@ -1,0 +1,9 @@
+        //$rubriek_id = \App\Rubriek::findOrFail(Input::get('rubriek'));
+        //$verkoper_id = \App\Gebruiker::findOrFail(Input::get($verkoper));
+
+
+	//dd(Input::get('prijs_vanaf') == 'on' ? 1 : 0);
+
+	//$advertentie->save();
+
+

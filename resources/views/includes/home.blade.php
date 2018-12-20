@@ -1,5 +1,5 @@
 
-    {{ $rg = 0 }}
+    <?php $rg = 0; ?>
 
     <div class="overzichtheader">
         <table id="overzichtstabelheader">
@@ -16,10 +16,18 @@
     <div class="overzicht">
         <table id="overzichtstabel">
             @foreach($advertenties as $key => $value)
-                {{ $rg = ($rg == 1) ? 2 : 1 }}
+                <?php $rg = ($rg == 1) ? 2 : 1; ?>
+                <?php 
+                    $voornaam = $value->gebruiker->voornaam;
+                    $ini = "";
+//                    $ini = ($value->gebruiker->intialen != "") ? " " . $value->gebruiker->intialen : "";
+                    $tv = ($value->gebruiker->tussenv != "") ? " " . $value->gebruiker->tussenv : "";
+                    $achternaam = " " . $value->gebruiker->achternaam;
+                    $naam = $voornaam . $ini . $tv . $achternaam;
+                ?>
                 <tr class="regel{{ $rg }}" >
-                    <td width="17.5%">{{ $value->rubriek_id }}</td>
-                    <td width="17.5%">{{ $value->verkoper_id }}</td>
+                    <td width="17.5%">{{ $value->rubriek->rubr_naam }}</td>
+                    <td width="17.5%">{{ $naam }}</td>
                     <td width="30%">{{ $value->ad_naam }}</td>
                     <td class="align_rechts" width="10%">{{ $value->art_prijs }}</td>
                     <td class="align_rechts" width="22.5%">{{ $value->created_at }}</td>
@@ -30,12 +38,20 @@
 
     <div class="advertenties">
         @foreach($advertenties as $key => $value)
+            <?php 
+                $voornaam = $value->gebruiker->voornaam;
+                $ini = "";
+//                $ini = ($value->gebruiker->intialen != "") ? " " . $value->gebruiker->intialen : "";
+                $tv = ($value->gebruiker->tussenv != "") ? " " . $value->gebruiker->tussenv : "";
+                $achternaam = " " . $value->gebruiker->achternaam;
+                $naam = $voornaam . $ini . $tv . $achternaam;
+            ?>
             <table id="advertentieplustabel">
                 <tr><td id="tbplusk1">
                     <table id="advertentietabel">
                         <tr id="btblrij1">
                             <td class="btblcel1" id="auteurnaam" width="30%">
-                                {{ $value->verkoper_id }}
+                                {{ $naam }}
                             </td>
                             <td class="btblrij1" width="70%">
                                 {{ $value->ad_naam }}
@@ -43,7 +59,7 @@
                         </tr>
                         <tr>
                             <td id="btblcelx">
-                                <i>rubriek: </i>{{ $value->rubriek_id }}
+                                <i>rubriek: </i>{{ $value->rubriek->rubr_naam }}
                             </td>
                             <td id="btblcelb">
                                 {{ $value->ad_tekst }}
@@ -84,6 +100,6 @@
                     </table>
                 </td></tr>
             </table>
+            <br/><hr class="hr75grijs"/>
         @endforeach
     </div>
-    <br/><hr class="hr75grijs"/>

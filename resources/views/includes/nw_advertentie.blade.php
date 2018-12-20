@@ -1,5 +1,6 @@
     
-    <form id="ad_invoerform" action="setup.php" method="post">
+    <form id="ad_invoerform" role="form" method="post" action="{{action('AdvertentieController@invoeren')}}">
+        @csrf
         <h4 id="advertentie"><u>advertentie</u></h4>
         <table>
             <tr><td width="250">Advertentie: <super>*</super></td>
@@ -8,16 +9,16 @@
             <td colspan="2">
                 <select name="rubriek" id="rubriek">
                     <option value="leeg"></option>
-                    @foreach($rubrieken as $key => $value)
-                        <option value="">{{ $value->rubr_naam }}</option>
+                    @foreach($rubrieken as $value)
+                        <option value="{{ $value->rubr_id }}">{{ $value->rubr_naam }}</option>
                     @endforeach
                 </select>
             </td></tr>
             <tr><td>Prijs: <super>*</super></td>
                 <td><input required type="text" id="art_prijs" name="art_prijs" value= '' placeholder="$    0.00"></td>
             <td>Prijs vanaf:&nbsp;&nbsp;&nbsp;
-                <input type="checkbox" id="prijs_vanaf" name="prijs_vanaf" value='vanaf'>
-                <input type="checkbox" id="prijs2_vanaf" name="prijs_vanaf2" value='vanaf2'>
+                <input type="checkbox" id="prijs_vanaf" name="prijs_vanaf" value="on">
+                <input type="checkbox" id="prijs_vanaf2" name="prijs_vanaf2" value="on">
             </td><td id="chkinfo" class="px12"></td></tr>
 
             <tr><td colspan="2" id="ad_omschrijving"><u><i>Omschrijving:</i></u></td></tr>
